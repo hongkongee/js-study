@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // 식별자는 중복되어서는 안됩니다.
+    // 자바스크립트에서 var로 변수를 선언하면 에러가 나지 않으므로 조심하세요!
+    var apple = '사과';
+    var apple = '애플';
+    console.log(apple);
+
+    // 식별자의 이름은 대/소문자를 철저하게 구분합니다.
+    var banana = '바나나';
+    var BANANA = '빠나나';
+    console.log(banana);
+    console.log(BANANA);
+
+    // 식별자는 숫자로만 이루어지거나, 숫자로 시작할 수 없습니다.
+    // var 700 = 365; (x)
+    // var 7num = 7; (x)
+    var num7 = 7;
+    var n7u7m7 = 7;
+
+    // 식별자는 특수기호(hyphen 등) 작성이 불가능합니다.
+    // $, _는 가능합니다. (사용하기로 한 곳이 약속되어 있음!)
+    // var my-name = '홍길동'; (x)
+
+    var myName = '홍길동'; // Camel-Case : java, java script에서 주로 사용
+    var my_name = '홍길동'; // snake case : C, python에서 주로 사용
+
+    var myPhoneNumber = '01012345678'; //camel
+    var my_phone_number = '01012345678'; //snake
+    var MyPhoneNumber = '01012345678'; //pascal
+    var strMyPhoneNumber = '01012345678'; //Hungarian
+
+    // 식별자 이름을 한글 혹은 영어 이외의 언어로 작성하는 것은 에러는 아니지만
+    // 권장되지는 않는다.
+    // var 과일 = '오렌지';
+
+
+
+  </script>
+
+</body>
+
+</html>
