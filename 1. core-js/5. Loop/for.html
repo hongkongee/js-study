@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    
+
+    /*
+    var i = 1; // begin
+    var total = 0;
+    while(i <= 10) {  // end
+      total += i;
+      i++; // step
+    }
+    */
+
+    // while: 반복 횟수가 명확하지 않은 경우 많이 사용.
+    // for: 반복 횟수가 명확한 경우 많이 사용.
+    
+    var total = 0;
+    for(var i=1; i<=10; i++) {
+      total += i;
+    }
+
+    // 1~200까지의 정수 중 6의 배수이면서 12의 배수는 아닌 수의 개수를 출력
+    var count = 0;
+    for(var j=1; j<=200; j++){
+      if(j % 6 === 0 && j % 12 !== 0){
+        count++;
+      }
+    }
+
+    console.log(count);
+
+    console.log('--------------------------------------------');
+    // factorial
+
+    var n = +prompt('정수 하나를 입력하세요');
+    var mul = 1;
+    for(var i=1; i<=n; i++){
+      mul *= i;
+    }
+
+    console.log(mul);
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    - 정수 1개를 입력받아서 해당 정수가 prime number인지를 판별
+    */
+
+    num = +prompt('정수 1개를 입력하세요.');
+    var aliquot = 0;
+    for(var i=1; i<=num; i++){
+      if(num % i === 0) {
+        aliquot++;
+      }
+    }
+
+    if (aliquot === 2) {
+      console.log(`${num}은 소수입니다.`);
+    } else {
+      console.log(`${num}은 소수가 아닙니다.`);  
+    }
+
+    console.log('------------------------------------');
+
+    for (var j=2; num % j !== 0; j++) {}
+
+    console.log(`${num}은 ${j===num ? '소수입니다.' : '소수가 아닙니다.'}`)
+
+
+  </script>
+</body>
+
+</html>
