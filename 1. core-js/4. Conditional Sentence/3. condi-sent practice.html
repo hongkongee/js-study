@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    var score = +prompt('점수를 입력하세요');
+    var result;
+
+    if (score >= 90) {
+      if (score >= 95) {
+        result = 'A+';
+      } else {
+        result = 'A0';
+      }
+    } else if(score >= 80) {
+      result = 'B';
+    } else if(score >= 70) {
+      result = 'C';
+    } else if(score >= 60) {
+      result = 'D';
+    } else {
+      result = 'F';
+    }
+    alert(`당신의 학점은 ${result}입니다.`);
+
+
+  </script>
+</body>
+
+</html>
