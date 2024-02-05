@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+  /*
+  - Quiz. 
+  아래 요구사항에 맞는 코드를 작성하고 
+  브라우저에서 실행하여 테스트하세요.
+  - 요구사항
+  1. prompt 창을 띄워 사용자에게 숫자를 입력해 달라고 요청한 후, 
+    입력받은 값들을 배열에 순차적으로 저장합니다.
+    
+  2. '그만'이라고 입력하면 질문을 멈추고
+    입력했던 숫자배열과 숫자의 총합(배열 요소의 합)을 계산하여 출력하세요.
+  */
+  var arr = [];
+
+  while(true) {
+    var num = prompt('숫자를 입력하세요.\n그만 두시려면 "그만" 이라고 입력하세요.');
+    if (num === '그만') {
+      if(confirm('정말 그만 두시겠어요?')) {
+        // confirm : 확인, 취고 버튼이 있는 알림창.
+        // 확인을 누를 시에 true, 취소를 누르면 false가 반환.
+        // if문과 주로 많이 사용
+        break;
+      } else {
+        continue;
+      }
+    }
+
+    if (!num) { // prompt에 아무것도 입력하지 않았으면 빈문자열, falsy
+      alert('값을 정확하게 입력하세요!');
+      continue;
+    }
+
+    if (Number(num) === NaN) {
+      alert('제대로 입력하세요.');
+      continue;
+    }
+
+    // 입력받은 숫자를 배열에 저장
+    arr.push(Number(num));
+    console.log(arr);
+  }
+
+  console.log(arr);
+
+  // 총합 구하기
+  var sum = 0;
+  for(var n of arr) {
+    sum += n;
+  }
+
+  // for(var i; i < arr.length; i++) {
+  //   sum += arr.pop();
+  // }
+  console.log('입력한 숫자배열의 총합은 ' + sum);
+
+
+  </script>
+
+</body>
+</html>
