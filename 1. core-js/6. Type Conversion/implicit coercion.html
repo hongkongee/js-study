@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    var ex = 10 + '20';
+    console.log('ex: ' + ex); // 1020
+
+    var ex2 = 10 * '3';
+    console.log('ex2: ' + ex2); // 30
+
+    ex2 = 100 + '';
+    console.log('ex2: ' + typeof ex2); // string
+
+    // 문자열 타입의 암묵적 숫자 변환
+    var ex3 = +'550'; // number
+
+    ex3 = +'false'; // number -> NaN
+
+
+    // 논리 타입을 암묵적 숫자 변환
+    ex3 = +true; // 1
+    ex3 = +false; // 0
+    
+    ex3 = +null; // 0
+    ex3 = +NaN;
+
+    console.log(ex3);
+    console.log('ex3: ' + typeof ex3);
+
+    console.log('------------------------------------------------');
+
+    // Truthy, Falsy
+
+    // undefined, null, 0 NaN, ''은 모두 false
+    // 나머지는 모두 true로 인식한다.
+
+    if('') console.log('OK1');
+    if('hello') console.log('OK2');
+    if(undefined) console.log('OK3'); 
+    if(null) console.log('OK4'); 
+    if(350) console.log('OK5');
+    if(NaN) console.log('OK6'); 
+    if(0) console.log('OK7'); 
+    if([1,2,3]) console.log('OK8');
+
+  </script>
+
+</body>
+
+</html>
