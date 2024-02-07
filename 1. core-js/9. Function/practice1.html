@@ -22,7 +22,8 @@
   약수들은 배열에 담아서 한번에 출력.
   */
 
-  function calcDivisor(...integers) {
+  // 함수 선언
+  function myCalcDivisor(...integers) { // 정수 여러개 받는 경우
     var output = {};
     for(var integer of integers) {
       var count = 0;
@@ -39,7 +40,24 @@
     return output;
   }
 
-  console.log(calcDivisor(4, 6, 9, 14, 13, 20, 25, 71, 90, 94));
+  function calcDivisor(targetNumber) {
+    var divisors = [];
+    for(var i=1; i<=targetNumber; i++) {
+      if(targetNumber % i == 0) {
+        divisors.push(i);
+      }
+    }
+    console.log(`${targetNumber}의 약수: ` + divisors);
+    return divisors.length; // array의 길이가 곧 약수의 개수
+  }
+
+  
+
+  
+  // 함수 호출
+  console.log(calcDivisor(25));
+  var divCount = calcDivisor(72);
+  console.log(`약수의 개수: ${divCount}개`);
 
 
   </script>
