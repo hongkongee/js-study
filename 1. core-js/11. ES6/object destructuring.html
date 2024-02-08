@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    const emp = {
+      empName: '뽀로로',
+      age: 4,
+      hireDate: '2021-01-01',
+      birthDay: '2020-02-08'
+    };
+
+    const {empName, birthDay, age} = emp;
+    console.log(`내 이름은 ${empName}이고, 나이는 ${age}살 입니다. 그리고 생일은 ${birthDay} 입니다.`);
+
+    const {empName: en, birthDay: bd, age: a} = emp;
+    console.log(`내 이름은 ${en}이고, 나이는 ${a}살 입니다. 그리고 생일은 ${bd} 입니다.`);
+
+    console.log('----------------------------------------------');
+    
+    const {birthDay: bDay, ...others} = emp; // 스프레드
+    console.log(others);
+    
+    // 객체 복사
+    console.log('----------------------------------------------');
+    const copyEmp = {
+      ...emp,
+      address: '마포구',
+      hobbies: ['산책', '수영'],
+      age: 17
+    };
+    console.log(copyEmp);
+    console.log(emp);
+    
+  </script>
+
+</body>
+
+</html>
