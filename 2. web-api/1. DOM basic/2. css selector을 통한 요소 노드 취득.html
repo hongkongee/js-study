@@ -11,17 +11,17 @@
   <ul id="fruits">
     <li class="fr apple">사과</li>
     <li class="fr banana">바나나</li>
-    <li class="fr graph">포도</li>
+    <li class="fr grape">포도</li>
     <li class="fr peach">복숭아</li>
   </ul>
 
   <script>
-    // const $graph = document.querySelector('.graph');
-    // const $graph = document.querySelector('#fruits li:nth-child(3)');
-    const $graph = document.querySelector('.banana + li');
-    console.log($graph);
+    // const $grape = document.querySelector('.grape');
+    // const $grape = document.querySelector('#fruits li:nth-child(3)');
+    const $grape = document.querySelector('.banana + li');
+    console.log($grape);
 
-    $graph.textContent = '맛있는 포도';
+    $grape.textContent = '맛있는 포도';
 
     // querySelector는 발견된 첫번째 태그만 가져옴.
     const $fr = document.querySelector('.fr');
