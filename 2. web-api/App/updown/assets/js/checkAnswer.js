@@ -52,10 +52,13 @@ function caseDown($icon) {
 
 function correctAnswer($icon) {
 
+  console.log('정답입니다!!!');
   // 1. #finish 박스에 class 'show' 부여
-  document.getElementById('finish').classList.add('show');
+  const $finish = document.getElementById('finish');
+  $finish.classList.add('show');
 
   // 2. #numbers 클릭 이벤트 해제
+  const $numbers = document.getElementById('numbers');
   $numbers.onlick = null;
 
   // 3. 사용자가 선택한 아이콘에 id 'move' 추가

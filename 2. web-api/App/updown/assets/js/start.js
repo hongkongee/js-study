@@ -61,12 +61,14 @@ function checkNumber($target) {
 
   // gameData에서 정답과 사용자의 입력값만 얻어오기
   const {secret, answer} = gameData;
+  // console.log(`secret: ${typeof secret}, answer: ${typeof answer}`);
+  // answer은 string (dataset.iconNumber)
 
   // 실제 정답과 사용자 선택값을 비교
-  if (secret === answer) { // 정답인 경우
+  if (secret === +answer) { // 정답인 경우
     console.log('정답입니다');
     correctAnswer($target);
-  } else if (secret > answer) { // UP 인 경우
+  } else if (secret > +answer) { // UP 인 경우
     caseUp($target);
   } else { // DOWN 인 경우
     caseDown($target);
